@@ -1,8 +1,9 @@
 package com.bridgelabz.cabinvoicegenerator;
 
-import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
 
 public class InvoiceGeneratorTest {
 InvoiceGenerator invoiceGenerator = null;
@@ -13,7 +14,7 @@ InvoiceGenerator invoiceGenerator = null;
 	}
 
 	@Test
-	public void givenDistanceAndTimeShouldReturnTotalFare() {	
+	public void givenDistanceAndTimeInvoiceShouldReturnTotalFare() {	
 		double distance = 2.0;
 		double time = 5;
 		double fare = invoiceGenerator.calculateFare(new Ride(distance,time));
@@ -21,7 +22,7 @@ InvoiceGenerator invoiceGenerator = null;
 	}
 	
 	@Test
-	public void givenlessDistanceAndTimeShouldReturnMinimumFare() {
+	public void givenlessDistanceAndTimeInvoiceShouldReturnMinimumFare() {
 		double distance = 0.1;
 		double time = 1;
 		double fare = invoiceGenerator.calculateFare(new Ride(distance,time));
@@ -29,7 +30,7 @@ InvoiceGenerator invoiceGenerator = null;
 	}
 	
 	@Test
-	public void givenMultipleRidesShouldReturnTotalFare() {
+	public void givenMultipleRidesInvoiceShouldReturnTotalFare() {
 		Ride[] rides = {
 				new Ride(2.0,5),
 				new Ride(0.1,1)
